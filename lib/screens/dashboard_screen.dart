@@ -2,17 +2,44 @@ import 'package:flutter/material.dart';
 import '../models/app_info.dart';
 import '../models/risk_level.dart';
 import '../services/risk_analyzer.dart';
+import '../services/notification_service.dart';
 import '../utils/constants.dart';
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreen extends StatefulWidget {
   final List<AppInfo> apps;
 
   const DashboardScreen({super.key, required this.apps});
 
   @override
+  State<DashboardScreen> createState() => _DashboardScreenState();
+}
+
+class _DashboardScreenState extends State<DashboardScreen> {
+  static bool _notificationTriggered = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _checkAndTriggerNotification();
+  }
+
+  void _checkAndTriggerNotification() {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      final hasHighRisk = widget.apps.any((app) => app.riskLevel == RiskLevel.high);
+      if (hasHighRisk && !_notificationTriggered) {
+        _notificationTriggered = true;
+        await NotificationService.showNotification(
+          title: "High Risk Alert ⚠️",
+          message: "Some apps have dangerous permissions. Review now!",
+        );
+      }
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final stats = RiskAnalyzer.getPermissionStatistics(apps);
-    final highRiskApps = apps.where((app) => app.riskLevel == RiskLevel.high).toList();
+    final stats = RiskAnalyzer.getPermissionStatistics(widget.apps);
+    final highRiskApps = widget.apps.where((app) => app.riskLevel == RiskLevel.high).toList();
 
     return SingleChildScrollView(
       padding: const EdgeInsets.all(AppConstants.paddingMedium),

@@ -2,6 +2,9 @@
     <!-- Required for Android 11+ to query all installed packages -->
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
     
+    <!-- Required for Android 13+ to show notifications -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    
     <application
         android:label="Permission Manager"
         android:name="${applicationName}"
