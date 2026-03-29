@@ -168,9 +168,4 @@ Risk levels are calculated based on:
 
 This project is created for educational and privacy awareness purposes.
 
-## Workspace Setup
 
-To set this as your active workspace in your IDE, use:
-```
-C:\Users\Jatin\.gemini\antigravity\scratch\app_permission_manager
-```
