@@ -11,17 +11,18 @@ A Flutter-based Android application that helps users monitor, analyze, and under
 - **Permission Control**: Direct navigation to system settings for permission management
 
 ### 🎨 User Interface
-- **Splash Screen**: Animated welcome screen
+- **Splash Screen**: Animated welcome screen featuring the branded App Icon
 - **App List Screen**: Searchable, filterable list of all installed apps with risk indicators
 - **App Detail Screen**: Complete permission breakdown with explanations
 - **Dashboard**: Privacy overview with statistics and high-risk app alerts
-- **Education Screen**: Privacy tips and permission explanations
+- **Education Screen**: Dynamic real-time privacy tips powered by a REST API integration
 
-### 🔒 Privacy Features
+### 🔒 Privacy Configuration & Security
 - Risk scoring algorithm based on dangerous permissions
 - Color-coded risk indicators (Green/Orange/Red)
 - Detailed permission descriptions and privacy risks
-- Best practices and privacy education
+- API-driven privacy education modules
+- Fully functional production-ready build with updated App Name properly configured
 
 ## Technical Stack
 
