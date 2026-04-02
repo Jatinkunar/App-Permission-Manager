@@ -63,6 +63,14 @@ android/
     └── MainActivity.kt  # Native Android integration
 ```
 
+## Download the App
+
+You can directly download the fully released APK version of this application from the `apk/` directory:
+
+📥 **[Download Latest APK](apk/app_permission_manager.apk)**
+
+Simply download the file to your Android device, grant installation permissions from unknown sources if prompted, and install.
+
 ## Setup Instructions
 
 ### Prerequisites
