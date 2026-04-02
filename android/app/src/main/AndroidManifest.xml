@@ -5,10 +5,13 @@
     <!-- Required for Android 13+ to show notifications -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     
+    <!-- Added required INTERNET permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
     <application
-        android:label="Permission Manager"
+        android:label="App Permission Manager"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:exported="true"
