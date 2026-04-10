@@ -81,9 +81,9 @@ Simply download the file to your Android device, grant installation permissions 
 
 ### Installation
 
-1. **Clone or navigate to the project directory**:
+1. **Clone the repository**:
    ```bash
-   cd C:\Users\Jatin\.gemini\antigravity\scratch\app_permission_manager
+   https://github.com/Jatinkunar/App-Permission-Manager.git
    ```
 
 2. **Install dependencies**:
